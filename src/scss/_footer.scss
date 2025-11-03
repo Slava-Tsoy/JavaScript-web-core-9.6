@@ -1,0 +1,28 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Footer */
+.footer {
+	display: flex;
+	justify-content: space-between;
+	gap: $bigIndent;
+	border-top: 1px solid $lineColor;
+	padding: $middleIndent $bigIndent;
+	font-weight: $mediumWeight;
+	color: $txtSecColor;
+
+	.copyright {
+		max-width: 220px;
+		text-align: left;
+	}
+
+	.confidential {
+		max-width: 220px;
+		text-align: center;
+	}
+
+	.public {
+		max-width: 330px;
+		text-align: right;
+	}
+}

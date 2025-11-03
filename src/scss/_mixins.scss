@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+// List Style Reset
+@mixin list-style-reset {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+// Pseudo Element
+@mixin fake-block-element {
+	content: ".";
+	display: block;
+	line-height: 0;
+	font-size: 0;
+}
+
+// Blank Marker
+@mixin blank-marker-absolute {
+	border-radius: 0 4px 4px 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 4px;
+}
+
+// Fixed Overlay
+@mixin fixed-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

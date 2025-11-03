@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+	font: $normalWeight $middleSize $fontFamily;
+	background-color: $bgColor;
+	color: $txtColor;
+}
+
+/* Wrapper */
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	min-height: 100%;
+	margin-left: $sidebarWidth;
+
+	& > * {
+		width: 100%;
+	}
+
+	&-inner {
+		& > * {
+			margin: $bigIndent 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}

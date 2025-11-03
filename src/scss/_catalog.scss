@@ -1,0 +1,73 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Catalog */
+.catalog {
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: $smallIndent;
+	}
+
+	&-item {
+		width: 240px;
+	}
+
+	&-card {
+		background-color: $whiteColor;
+		border: 1px solid $dividerColor;
+		border-radius: 6px;
+		padding: $smallIndent;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: $smallIndent;
+
+		&--vendor {
+			padding: 6px $smallIndent;
+			min-height: 72px;
+		}
+
+		&--folder {
+			min-height: 160px;
+		}
+
+		&-details {
+			flex-grow: 1;
+			display: grid;
+			gap: $smallIndent;
+		}
+
+		&__term {
+			font-size: $largeSize;
+			font-weight: $mediumWeight;
+			margin-right: -($smallIndent + 40);
+		}
+
+		&__desc {
+			overflow: hidden;
+			text-align: justify;
+			height: 88px;
+		}
+
+		&__image {
+			img {
+				display: block;
+			}
+		}
+
+		&__icon {
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			border: 2px solid $redColor;
+			border-radius: 100%;
+			background: url("../img/icon_dropdown.svg") 50% 50% no-repeat $whiteColor;
+
+			&--end {
+				margin-top: auto;
+			}
+		}
+	}
+}

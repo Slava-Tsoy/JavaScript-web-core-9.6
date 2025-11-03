@@ -1,0 +1,58 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Top Panel */
+.top-panel {
+	display: none;
+	border-bottom: 1px solid $lineColor;
+	position: sticky;
+	z-index: 1000;
+	top: 0;
+
+	&-container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+		column-gap: $bigIndent;
+		background-color: $whiteColor;
+		padding: $smallIndent $bigIndent;
+	}
+
+	&-side-left {
+		width: auto;
+	}
+
+	&-side-right {
+		overflow: hidden;
+	}
+}
+
+/* Header */
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: $bigIndent;
+	position: relative;
+	padding: 0 $bigIndent;
+
+	&::before {
+		@include fake-block-element;
+		@include blank-marker-absolute;
+		background-color: $markerColor;
+	}
+
+	&-page-name {
+		flex-grow: 1;
+
+		& > * {
+			margin: 0;
+		}
+	}
+
+	&-icons-container {
+		flex-shrink: 0;
+		font-size: $largeSize;
+		font-weight: $mediumWeight;
+	}
+}

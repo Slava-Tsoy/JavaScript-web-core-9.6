@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Navigate */
+.navigate {
+	padding: 0 $bigIndent;
+	font-size: $largeSize;
+	font-weight: $mediumWeight;
+	overflow-x: auto;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include list-style-reset;
+
+		li {
+			a {
+				display: block;
+				padding: 10px 20px;
+				text-decoration: none;
+				white-space: nowrap;
+				color: $txtSecColor;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:active {
+					color: $redColor;
+				}
+			}
+
+			&.current {
+				a {
+					cursor: default;
+					border: 2px solid $frameColor;
+					border-radius: 6px;
+					background-color: $whiteColor;
+					
+					&:hover {
+						text-decoration: none;
+					}
+
+					&:active {
+						color: $txtSecColor;
+					}
+				}
+			}
+		}
+	}
+}

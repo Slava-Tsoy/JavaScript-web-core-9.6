@@ -1,0 +1,43 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Article Block */
+.article-block {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: $bigIndent;
+	margin: $bigIndent;
+
+	&-body {
+		&__text {
+			margin-bottom: $smallIndent;
+			
+			&--overflow {
+				overflow: hidden;
+				height: 165px;
+			}
+		}
+
+		&-more {
+			display: flex;
+			flex-wrap: wrap;
+			gap: $smallIndent;
+			font-style: $largeSize;
+			font-weight: $mediumWeight;
+			margin-top: $smallIndent;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		max-width: 530px;
+		min-width: 320px;
+		margin-left: auto;
+
+		img {
+			display: block;
+			width: 100%;
+			border-radius: 6px;
+		}
+	}
+}

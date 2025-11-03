@@ -1,0 +1,59 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Section */
+.section {
+	border-top: 1px solid $lineColor;
+
+	&-header {
+		background-image: linear-gradient(90deg, transparent 0%, $whiteColor 100%);
+		padding: $smallIndent $bigIndent;
+		text-transform: uppercase;
+		font-size: $largeSize;
+		color: $txtSecColor;
+	}
+
+	&-content {
+		display: grid;
+		gap: $bigIndent;
+		margin: $bigIndent;
+
+		&-more {
+			font-size: $largeSize;
+			font-weight: $mediumWeight;
+		}
+
+		&-body {
+			&--overflow {
+				overflow: hidden;
+				height: 160px;
+			}
+		}
+	}
+	
+	&-block {
+		margin: $bigIndent;
+
+		&--limited {
+			max-width: 420px;
+		}
+
+		&-text {
+			margin-bottom: $smallIndent;
+
+			* {
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&-more {
+			font-size: $largeSize;
+			font-weight: $mediumWeight;
+		}
+	}
+}

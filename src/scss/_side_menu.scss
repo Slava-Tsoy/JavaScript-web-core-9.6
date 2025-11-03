@@ -1,0 +1,54 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Side Menu */
+.side-menu {
+	overflow-y: auto;
+	font-size: $largeSize;
+	font-weight: $mediumWeight;
+	padding: 16px 0;
+
+	ul {
+		display: grid;
+		row-gap: 10px;
+		@include list-style-reset;
+
+		li {
+			a {
+				display: block;
+				position: relative;
+				padding: 5px $middleIndent;
+				text-decoration: none;
+				color: $txtColor;
+				transition: 0.4s;
+
+				&::before {
+					@include fake-block-element;
+					@include blank-marker-absolute;
+					transition: 0.4s;
+				}
+
+				&:hover {
+					background-color: $redColor;
+					color: $whiteColor;
+
+					&::before {
+						background-color: $whiteColor;
+					}
+				}
+			}
+
+			&.current {
+				a {
+					background-color: transparent;
+					color: $txtSecColor;
+					cursor: default;
+
+					&::before {
+						background-color: $markerColor;
+					}
+				}
+			}
+		}
+	}
+}

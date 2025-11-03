@@ -1,0 +1,93 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Logo */
+.logo {
+	display: block;
+	width: 96px;
+	height: 50px;
+	background-image: $logo;
+	background-color: transparent;
+	background-size: contain;
+}
+
+/* Icon */
+.icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: $redColor;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+
+	&-list {
+		background-image: $icon_list;
+	}
+	&-phone {
+		background-image: $icon_phone;
+	}
+	&-comments {
+		background-image: $icon_comments;
+	}
+	&-login {
+		background-image: $icon_login;
+	}
+	&-request {
+		background-image: $icon_request;
+	}
+	&-status {
+		background-image: $icon_status;
+	}
+	&-search {
+		background-image: $icon_search;
+	}
+	&-close {
+		background-image: $icon_close;
+	}
+	&-divider {
+		display: block;
+		width: 0;
+		height: 32px;
+		border: 1px solid $dividerColor;
+		border-radius: 1px;
+	}
+}
+
+/* Icons List */
+.icons-list {
+	display: flex;
+	align-items: center;
+	gap: $smallIndent;
+	@include list-style-reset;
+
+	a {
+		color: $txtColor;
+
+		&:active {
+			color: $redColor;
+		}
+	}
+
+	&.big-gap {
+		gap: $bigIndent;
+	}
+
+	&.flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	&.align-right-all {
+		justify-content: flex-end;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&.align-right-self {
+			margin-left: auto;
+		}
+	}
+}

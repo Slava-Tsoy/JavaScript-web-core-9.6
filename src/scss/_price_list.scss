@@ -1,0 +1,83 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Price List */
+.price {
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: $smallIndent;
+	}
+
+	&-item {
+		width: 260px;
+	}
+
+	&-card {
+		background-color: $whiteColor;
+		border: 1px solid $dividerColor;
+		border-radius: 6px;
+		padding: $smallIndent;
+		display: grid;
+		align-items: end;
+		grid-template-columns: 1fr auto;
+		row-gap: $smallIndent;
+		min-height: 200px;
+
+		&__label {
+			color: $txtSecColor;
+		}
+
+		&__name, &__price {
+			grid-column: 1/3;
+		}
+
+		&__deadline {
+			width: auto;
+		}
+
+		&__order {
+			width: 120px;
+			text-align: center;
+		}
+	}
+}
+
+/* Price Table */
+.price {
+	&-table {
+		display: grid;
+		gap: $smallIndent;
+
+		&-thead, &-tbody {
+			padding: 0 $middleIndent;
+
+			&-row {
+				display: grid;
+				grid-template-columns: 3fr repeat(2, 1fr) 120px;
+				gap: $smallIndent;
+			}
+		}
+
+		&-thead {
+			color: $txtSecColor;
+		}
+
+		&-tbody {
+			background-color: $whiteColor;
+			border: 1px solid $dividerColor;
+			border-radius: 6px;
+
+			&-row {
+				border-top: 1px solid $dividerColor;
+				padding: $smallIndent 0;
+				align-items: center;
+
+				&:first-child {
+					border-top: none;
+				}
+			}
+		}
+	}
+}

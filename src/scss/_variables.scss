@@ -1,0 +1,53 @@
+@use 'sass:color';
+
+// Colors
+$bgColor: #f8f8f8;					// Background Color
+$whiteColor: #ffffff;				// White Color
+$blackColor: #000000;				// Black Color
+$redColor: #ff3e79;				// Red Color
+$lineColor: #d9fff5;				// Border Color
+$markerColor: #41f6d7;				// Border Color
+$frameColor: #b8ffec;				// Border Color
+$dividerColor: rgba(0, 0, 0, 0.1);	// Border Color
+$txtColor: #1b1c21;				// Text Color
+$txtSecColor: #7e7e82;				// Text Color
+$shadowColor: #0e1850;				// Shadow Color
+
+// Indent
+$smallIndent: 16px;
+$middleIndent: 24px;
+$bigIndent: 32px;
+
+// Text Params
+$fontFamily: 'TT Lakes', sans-serif;
+$smallSize: 12px;
+$middleSize: 14px;
+$largeSize: 16px;
+$normalWeight: 400;
+$mediumWeight: 500;
+$boldWeight: bold;
+
+// H-group
+$h1Size: 28px;
+$h2Size: 26px;
+$h3Size: 24px;
+$h4Size: 22px;
+$h5Size: 20px;
+$h6Size: 18px;
+
+// Icons
+$logo: url('../img/logo.svg');							// Logo
+$icon_list: url('../img/icon_list.svg');				// Icon list
+$icon_phone: url('../img/icon_phone.svg');				// Icon phone
+$icon_comments: url('../img/icon_comments.svg');		// Icon comments
+$icon_login: url('../img/icon_login.svg');				// Icon login
+$icon_request: url('../img/icon_request.svg');			// Icon request
+$icon_status: url('../img/icon_status.svg');			// Icon status
+$icon_search: url('../img/icon_search.svg');			// Icon search
+$icon_close: url('../img/icon_close.svg');				// Icon close
+$icon_dropdown: url('../img/icon_dropdown.svg');		// Icon dropdown
+$icon_drop_white: url('../img/icon_drop_white.svg');	// Icon drop_white
+$icon_more: url('../img/icon_more.svg');				// Icon more
+
+// Sidebar
+$sidebarWidth: 320px;

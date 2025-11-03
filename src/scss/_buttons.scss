@@ -1,0 +1,63 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* More Link */
+.more-link {
+	color: inherit;
+	padding-right: $smallIndent;
+	background: url("../img/icon_dropdown.svg") 100% 50% no-repeat;
+}
+
+/* More Button */
+.more-button {
+	display: inline-flex;
+	align-items: center;
+	color: inherit;
+	line-height: 1;
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		background: url("../img/icon_more.svg") 50% 50% no-repeat;
+		transition: 0.3s;
+
+		&--opened {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__text {
+		padding: 0 10px;
+	}
+}
+
+/* Order Button */
+.order-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $redColor;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-size: $smallSize;
+	font-weight: $mediumWeight;
+	color: $whiteColor;
+	width: 120px;
+	padding: 4px;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		background: url("../img/icon_drop_white.svg") 50% 50% no-repeat;
+	}
+
+	&__text {
+		flex-grow: 1;
+		text-align: center;
+	}
+}

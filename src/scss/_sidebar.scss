@@ -1,0 +1,120 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Sidebar */
+.aside {
+	width: $sidebarWidth;
+	background-color: $whiteColor;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+	&-bar {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: grid;
+		grid-template-rows: auto 1fr repeat(2, auto);
+		gap: $smallIndent;
+		background-color: $whiteColor;
+
+		&-header {
+			padding: $smallIndent $middleIndent;
+
+			.icons-list {
+				&-item {
+					&:nth-child(1),
+					&:nth-child(2) {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&-icons-container {
+			padding: 0 $middleIndent;
+		}
+
+		&-footer {
+			padding: 0 $middleIndent;
+			font-size: $largeSize;
+			font-weight: $mediumWeight;
+		}
+
+		&-overlay {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($whiteColor, 0.9);
+		}
+	}
+}
+
+/* Mail To */
+.mailto {
+	margin: $smallIndent 0;
+	
+	a {
+		color: $txtColor;
+		
+		&:active {
+			color: $redColor;
+		}
+
+		&:visited {
+			color: $txtSecColor;
+		}
+	}
+}
+
+/* Phone Number */
+.phone-number {
+	margin: $smallIndent 0;
+	font-size: $smallSize * 2;
+	font-weight: $boldWeight;
+	line-height: 1;
+
+	a {
+		color: $txtColor;
+		
+		&:active {
+			color: $redColor;
+		}
+
+		&:visited {
+			color: $txtSecColor;
+		}
+	}
+}
+
+/* Lang Bar */
+.lang-panel {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $smallIndent;
+	margin: $bigIndent 0;
+	line-height: 1;
+
+	a {
+		color: $txtColor;
+		
+		&:active {
+			color: $redColor;
+		}
+
+		&.active {
+			cursor: default;
+			text-decoration: none;
+			color: $txtSecColor;
+		}
+	}
+}
