@@ -9,14 +9,14 @@ function expandFull() {
 			let container = btn[i].parentElement.previousSibling.previousSibling;
 			
 			if (i == 0) {
-				container.classList.toggle('article-block-body__text--overflow');
+				container.classList.toggle('article-block-body__text--opened');
 				if (val == 'Скрыть') {
 					val = 'Читать далее';
 				} else {
 					val = 'Скрыть';
 				};
 			} else {
-				container.classList.toggle('section-content-body--overflow');
+				container.classList.toggle('section-content-body--opened');
 				if (val == 'Скрыть') {
 					val = 'Показать все';
 				} else {

@@ -11,10 +11,15 @@
 	&-body {
 		&__text {
 			margin-bottom: $smallIndent;
+			transition: max-height 0.5s ease-in-out;
 			
 			&--overflow {
 				overflow: hidden;
-				height: 165px;
+				max-height: 165px;
+			}
+
+			&--opened {
+				max-height: 100%;
 			}
 		}
 
